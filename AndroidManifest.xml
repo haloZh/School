@@ -1,0 +1,50 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.ronguan"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="8"
+        android:targetSdkVersion="18" />
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+- 
+    <application
+        android:name="com.mani.volleydemo.app.VolleySampleApplication"
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@android:style/Theme.NoTitleBar" >
+- 
+        <activity
+            android:name="com.ronguan.activity.LoadingActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" >
+- 
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+- 
+        <!--
+        <activity
+            android:name=".StringObjectRequestActivity"
+            android:label="@string/app_name" />
+        <activity
+            android:name=".GSONObjectRequestActivity"
+            android:label="@string/app_name" />
+        <activity
+            android:name=".SSLConnectionActivity"
+            android:label="@string/app_name" />
+        <activity
+            android:name=".NetworkImageActivity"
+            androi
+        -->
+        <activity android:name="com.ronguan.activity.MainActivity"></activity>
+  d:label="@string/app_name" /> 
+    </application>
+
+</manifest>

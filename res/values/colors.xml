@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!--++++++++++++++++++++++ Background +++++++++++++++++++++++-->
+    <color name="search_bar_normal_background_color">@color/text_white</color>
+    <color name="bg_white">#FFFFFF</color>
+    <color name="bg_black">#000000</color>
+    <color name="bg_light_cyan">#f1edfd</color>
+    <color name="bg_search_bar">#ad79bc</color>
+    <!--+++++++++++++++++++++++++ Text ++++++++++++++++++++++++++-->
+    <color name="text_black">#000000</color>
+    <color name="text_dark_gray">#1E1E1E</color>
+    <color name="text_gray">#828796</color>
+    <color name="text_white">#FFFFFF</color>
+    <color name="text_orange">#bb6f04</color>
+    <color name="button_normal_text_color">@color/text_black</color>
+    <color name="text_red">#FF0000</color>
+    <color name="text_purple">#653e7d</color>
+    <color name="text_light_gray">#7f7f7f</color>
+    <color name="text_tab_selected">#eeeeee</color>
+    <color name="text_tab_normal">#b9b9b9</color>
+    <color name="text_tab_shadow">#67587686</color>
+    
+	<!-- Venue list divider -->
+	<color name="venue_list_divider">#e0e0e0</color>
+	
+	
+	<color name="white">#FFFFFFFF</color>
+    <color name="black">#FF000000</color>
+    <color name="transparent">#00000000</color>
+    <color name="dialog_bg">#FFFFFFCC</color>
+    <color name="background">#FFF5F5F5</color>
+    <color name="list_click">#FFE5E5E5</color>
+    <color name="blue">#FF0568CC</color>
+    <color name="gray">#FF949494</color>
+    <color name="dark">#FF94a5a5</color>
+    <color name="orange">#FFCC3300</color>
+    <color name="red">#FFFF0000</color>
+    <color name="redd">#cc4343</color>    
+    <color name="green">#FF008806</color>
+    <color name="orange_bg">#ffdd7711</color>
+
+    <!-- book -->
+    <color name="canvas">#404040</color>
+    <color name="toolbar">#C0000000</color>
+    <color name="page_indicator">#C0202020</color>
+    <color name="busy_indicator">#C0202020</color>
+    <color name="button_normal">#00000000</color>
+    <color name="button_pressed">#FF2572AC</color>
+    <color name="text_normal">#FFFFFF</color>
+    <color name="text_pressed">#FFFFFF</color>
+    <color name="text_border_normal">#000000</color>
+    <color name="text_border_pressed">#2572AC</color>
+    <color name="text_border_focused">#000000</color>
+    <color name="seek_thumb">#2572AC</color>
+    <color name="seek_progress">#FFFFFF</color>
+    <color name="pdf_child_view_background_white">#FFFFFF</color>
+    <color name="pdf_child_view_background_orange">#efd9b5</color>
+    <color name="pdf_child_view_background_green">#dfeed6</color>
+    <color name="pdf_listview_line">#e5e5e5</color>
+    <color name="pdf_menu_itme_tile">#000000</color>
+    <color name="pdf_mene_item_title">#b2b2b2</color>
+    <color name="pdf_list_item_select">#e5e5e5</color>
+    <color name="pdf_list_item_bg">#f5f5f5</color>
+    <color name="no_connect_ind">#e87629</color>
+    <color name="hint_color">#ffCACACA</color>
+    <color name="holo_blue">#FF33E5B5</color>
+    <color name="color_text_selected">#ff0000</color>
+    <color name="color_text_normal">#ffffff</color>
+	<color name="viewfinder_mask">#60000000</color>
+	<color name="result_view">#b0000000</color>
+	<color name="possible_result_points">#c0ffff00</color>
+	<!--底边的背景色-->
+	<color name="bg_bottom">#ff00bcd4</color>
+	<!--底部字点击后颜色-->
+	<color name="tv_bottom_click">#fffef076</color>
+	<!-- 整体背景色 -->
+	<color name="backgroud">#ebf6f5</color>
+	
+</resources>
