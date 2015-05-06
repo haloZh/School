@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/backgroud"
+    android:orientation="vertical" >
+
+    <include layout="@layout/top_layout" />
+
+    <TextView
+        android:id="@+id/tv_fofragment_test"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/margin_normal"
+        android:background="@drawable/normal_white_selector"
+        android:drawableLeft="@drawable/home_icon_dailyenglishlesson"
+        android:drawableRight="@drawable/into"
+        android:gravity="center_vertical"
+        android:text="培训测试"
+        android:textColor="@color/black"
+        android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/tv_fofragment_smalltest"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/margin_normal"
+        android:background="@drawable/normal_white_selector"
+        android:drawableLeft="@drawable/home_icon_examandconsult"
+        android:drawableRight="@drawable/into"
+        android:gravity="center_vertical"
+        android:text="微竞赛"
+        android:textColor="@color/black"
+        android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/tv_fofragment_rank"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/margin_normal"
+        android:background="@drawable/normal_white_selector"
+        android:drawableLeft="@drawable/home_icon_location"
+        android:drawableRight="@drawable/into"
+        android:gravity="center_vertical"
+        android:text="排行榜"
+        android:textColor="@color/black"
+        android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/tv_fofragment_question"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/margin_normal"
+        android:background="@drawable/normal_white_selector"
+        android:drawableLeft="@drawable/home_icon_answerandquestions"
+        android:drawableRight="@drawable/into"
+        android:gravity="center_vertical"
+        android:text="有问有答"
+        android:textColor="@color/black"
+        android:textSize="20sp" />
+
+</LinearLayout>

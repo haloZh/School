@@ -69,29 +69,27 @@ public class BaseFragment extends Fragment implements FragmentListener {
 	@Override
 	public void onFragmentBackPressed() {
 
-//		Activity activity = getActivity();
-//		if (activity instanceof MainActivity) {
-//			BaseFragment bf = ((MainActivity) getActivity()).getCurrentFragment();
-//			if (bf instanceof MainType1Fragment || bf instanceof DownloadFragment || bf instanceof UserFragment||bf instanceof InteractionFragment) {
-//				if (bf.getFragmentManager() != null) {
-//					if (bf.getFragmentManager().getBackStackEntryCount() > 0) {
-//						bf.getFragmentManager().popBackStack();
-//					} else {
-//						if (bf.getChildFragmentManager().getBackStackEntryCount() > 0) {
-//							bf.getChildFragmentManager().popBackStack();
-//						} else {
-//							showExit();
-//						}
-//					}
-//				} else {
-//					showExit();
-//				}
-//			} else {
-//				showExit();
-//			}
-//		} else if (activity instanceof PayActivity) {
-//			getActivity().finish();
-//		}
+		Activity activity = getActivity();
+		if (activity instanceof MainActivity) {
+			BaseFragment bf = ((MainActivity) getActivity()).getCurrentFragment();
+			if (bf instanceof FirstTabFragment || bf instanceof SecondeTabFragment || bf instanceof ThirdTabFragment||bf instanceof FouthTabFragment) {
+				if (bf.getFragmentManager() != null) {
+					if (bf.getFragmentManager().getBackStackEntryCount() > 0) {
+						bf.getFragmentManager().popBackStack();
+					} else {
+						if (bf.getChildFragmentManager().getBackStackEntryCount() > 0) {
+							bf.getChildFragmentManager().popBackStack();
+						} else {
+							showExit();
+						}
+					}
+				} else {
+					showExit();
+				}
+			} else {
+				showExit();
+			}
+		} 
 	}
 
 	@Override

@@ -3,8 +3,6 @@ package com.ronguan.activity;
 import java.util.ArrayList;
 import java.util.List;
 
-import android.app.Activity;
-import android.app.ListFragment;
 import android.content.Context;
 import android.graphics.Color;
 import android.os.Bundle;
@@ -13,14 +11,9 @@ import android.support.v4.app.FragmentActivity;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.app.FragmentTransaction;
-import android.support.v4.view.PagerAdapter;
 import android.support.v4.view.ViewPager.OnPageChangeListener;
-import android.util.Log;
 import android.view.View;
 import android.view.ViewGroup;
-import android.view.animation.Animation;
-import android.view.animation.TranslateAnimation;
-import android.view.animation.Animation.AnimationListener;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
@@ -32,6 +25,7 @@ import com.ronguan.fragment.FouthTabFragment;
 import com.ronguan.fragment.SecondeTabFragment;
 import com.ronguan.fragment.ThirdTabFragment;
 import com.ronguan.view.JazzyViewPager;
+import com.umeng.message.PushAgent;
 
 /**
  * Created by haloZh on 2015/4/21.
@@ -69,6 +63,8 @@ public class MainActivity extends FragmentActivity implements View.OnClickListen
         context=this;
         initData();
         initView();
+        
+        
     }
     
     void initView(){
@@ -80,7 +76,7 @@ public class MainActivity extends FragmentActivity implements View.OnClickListen
     	tvTab2=(TextView)findViewById(R.id.tv2_main_tab);
     	tvTab3=(TextView)findViewById(R.id.tv3_main_tab);
     	tvTab4=(TextView)findViewById(R.id.tv4_main_tab);
-    	
+
     	mViewPager=(JazzyViewPager)findViewById(R.id.main_viewpager);
     	adapter=new MyPagerAdapter(getSupportFragmentManager(), mListFragment);
     	mViewPager.setAdapter(adapter);
@@ -100,6 +96,10 @@ public class MainActivity extends FragmentActivity implements View.OnClickListen
     }
     
     void initData(){
+    	//开启推送服务
+    	PushAgent mPushAgent = PushAgent.getInstance(context);
+    	mPushAgent.enable();
+    	
     	TFragment1=new FirstTabFragment();
     	TFragment2=new SecondeTabFragment();
     	TFragment3=new ThirdTabFragment();

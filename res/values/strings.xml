@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">融冠资本</string>
+
+    <string name="app_name">数字校园</string>
     <string name="no_net">sorry,网络不给力哦！</string>
+
     <string-array name="jazzy_effects">
         <item>Standard</item>
         <item>Tablet</item>
@@ -16,9 +18,22 @@
         <item>RotateDown</item>
         <item>Accordion</item>
     </string-array>
+
     <string name="tab1">首页</string>
-    <string name="tab2">产品列表</string>
-    <string name="tab3">我的账户</string>
+    <string name="tab2">课件</string>
+    <string name="tab3">我的</string>
     <string name="tab4">更多</string>
-    <string name="home_tittle">融冠金融</string>
+    <string name="home_tittle">数字校园</string>
+    <string name="name">姓名</string>
+    <string name="work">工作单位</string>
+    <string name="hint_name">请输入姓名</string>
+    <string name="hint_erp">请输入ERP号</string>
+    <string name="erp">ERP</string>
+    <string name="login">登录</string>
+    <string name="scan_text">请将二维码置于取景框内扫描</string>
+    <string name="saomiaotip">点击右上角，扫描二维码加入班级！</string>
+	<string name="class_kecheng">(1)班课程表</string>
+	<string name="tittle_kejian">课件</string>
+	<string name="coursewear">培训课件</string>
+	<string name="small_coursewear">微课件</string>
 </resources>

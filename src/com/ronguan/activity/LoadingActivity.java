@@ -7,6 +7,7 @@ import android.os.Handler;
 import android.view.WindowManager;
 
 import com.example.ronguan.R;
+import com.umeng.message.PushAgent;
 
 
 /**
@@ -26,7 +27,7 @@ public class LoadingActivity extends Activity {
 		Intent service = new Intent();
 //		Intent.setClass(LoadingActivity.this, ShengCaiService.class);
 		startService(service);
-
+		PushAgent.getInstance(this).onAppStart();
 		// 默认显示.5s 然后跳转到广告页面
 		new Handler().postDelayed(new Runnable() {
 

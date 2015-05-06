@@ -1,5 +1,7 @@
 package com.ronguan.utils;
 
+import com.example.ronguan.R;
+
 import android.app.Activity;
 import android.app.Dialog;
 import android.content.Context;
@@ -51,7 +53,7 @@ public class DialogUtil {
 		if(activity == null) return;
 		Toast toast = Toast.makeText(activity, null, Toast.LENGTH_SHORT);
 		LinearLayout layout = (LinearLayout) toast.getView();
-		layout.setBackgroundColor(Color.GREEN);
+		layout.setBackgroundResource(R.drawable.toast_background);
 		layout.setOrientation(LinearLayout.HORIZONTAL);
 		layout.setGravity(Gravity.CENTER_VERTICAL);
 		TextView tv = new TextView(activity);
@@ -115,29 +117,29 @@ public class DialogUtil {
 		}
 	}*/
 
-	/*// 展示弹窗
-	public static Dialog showAlert(Context context, String title, String content, String yesText, String noText, OnClickListener yesClick, OnClickListener noClick) {
-		LayoutInflater inflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-		View view = inflater.inflate(R.layout.dialog_alert, null);
-		TextView titleView = (TextView) view.findViewById(R.id.alert_title);
-		titleView.setText(title);
-		TextView contentView = (TextView) view.findViewById(R.id.alert_content);
-		contentView.setText(content);
-		Button yes = (Button) view.findViewById(R.id.alert_yes);
-		Button no = (Button) view.findViewById(R.id.alert_no);
-		Dialog alert = new Dialog(context, R.style.alertdialog);
-		alert.setContentView(view);
-		if (yesText == null || "".equals(yesText)) {
-			yes.setVisibility(View.GONE);
-		} else {
-			yes.setText(yesText);
-			yes.setOnClickListener(yesClick);
-		}
-		no.setText(noText);
-		no.setOnClickListener(noClick);
-		alert.show();
-		return alert;
-	}*/
+//	// 展示弹窗
+//	public static Dialog showAlert(Context context, String title, String content, String yesText, String noText, OnClickListener yesClick, OnClickListener noClick) {
+//		LayoutInflater inflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+//		View view = inflater.inflate(R.layout.dialog_alert, null);
+//		TextView titleView = (TextView) view.findViewById(R.id.alert_title);
+//		titleView.setText(title);
+//		TextView contentView = (TextView) view.findViewById(R.id.alert_content);
+//		contentView.setText(content);
+//		Button yes = (Button) view.findViewById(R.id.alert_yes);
+//		Button no = (Button) view.findViewById(R.id.alert_no);
+//		Dialog alert = new Dialog(context, R.style.alertdialog);
+//		alert.setContentView(view);
+//		if (yesText == null || "".equals(yesText)) {
+//			yes.setVisibility(View.GONE);
+//		} else {
+//			yes.setText(yesText);
+//			yes.setOnClickListener(yesClick);
+//		}
+//		no.setText(noText);
+//		no.setOnClickListener(noClick);
+//		alert.show();
+//		return alert;
+//	}
 
 	// 展示弹窗
 	/*public static Dialog showPhoneAlert(Context context, String title, String yesText, String noText, OnClickListener yesClick, OnClickListener noClick) {

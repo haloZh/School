@@ -233,7 +233,7 @@ public class NetworkImageActivity extends Activity {
 			}, 0, 0, Bitmap.Config.ARGB_8888, new Response.ErrorListener() {
 				@Override
 				public void onErrorResponse(VolleyError error) {
-					mImageView3.setImageResource(R.drawable.ic_launcher);
+					mImageView3.setImageResource(R.drawable.label);
 				}
 			});
 		mVolleyQueue.add(imgRequest);

@@ -8,6 +8,7 @@ import java.util.TimerTask;
 import android.annotation.SuppressLint;
 import android.annotation.TargetApi;
 import android.content.Context;
+import android.content.Intent;
 import android.os.Build;
 import android.os.Bundle;
 import android.os.Handler;
@@ -22,6 +23,7 @@ import android.view.View.OnClickListener;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.ImageView.ScaleType;
+import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
@@ -48,6 +50,9 @@ public class FirstTabFragment extends BaseFragment implements OnClickListener,
 
 	private GuideAdapter adapter;
 
+	// 扫一扫按钮
+	private Button btnSao;
+
 	private int current;
 	// 广告栏的小点
 	private ImageView[] dots;
@@ -59,6 +64,10 @@ public class FirstTabFragment extends BaseFragment implements OnClickListener,
 	private Timer timer;
 
 	private Handler mHandler;
+	//提示扫描的tv
+	private TextView tvTip;
+	//课程表
+	private LinearLayout lLayout_class;
 
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
@@ -74,25 +83,34 @@ public class FirstTabFragment extends BaseFragment implements OnClickListener,
 	public View onCreateView(LayoutInflater inflater, ViewGroup container,
 			Bundle savedInstanceState) {
 		// TODO Auto-generated method stub
-		View view = inflater.inflate(R.layout.layout_firt_fragment, container, false);
-		
+		View view = inflater.inflate(R.layout.layout_firt_fragment, container,
+				false);
+
 		initView(view);
-		
+
 		initAd();
-		
+
 		createView();
-		
+
 		return view;
 	}
 
 	// 初始化布局
-	void initView(View view) {
+	@SuppressLint("NewApi") void initView(View view) {
 		viewPager = (JazzyViewPager) view
 				.findViewById(R.id.viewpager_first_fragment);
 		tvTittle = (TextView) view.findViewById(R.id.tv_top_title);
 		tvTittle.setText(getResources().getString(R.string.home_tittle));
 		relateLayout = (RelativeLayout) view.findViewById(R.id.ad_rlayout_guid);
 		dotLl = (LinearLayout) view.findViewById(R.id.guide_ll);
+		btnSao = (Button) view.findViewById(R.id.btn_top_right);
+		btnSao.setBackground(getResources().getDrawable(R.drawable.saoyisao));
+		btnSao.setVisibility(View.VISIBLE);
+		btnSao.setOnClickListener(this);
+		
+		tvTip=(TextView)view.findViewById(R.id.tv_tip);
+		lLayout_class=(LinearLayout)view.findViewById(R.id.llayout_first_fragment);
+		
 		initAd();
 	}
 
@@ -108,7 +126,7 @@ public class FirstTabFragment extends BaseFragment implements OnClickListener,
 				.getLayoutParams();
 		int height = (int) (AD_H * ((double) width / (double) AD_W));
 		params.height = height;
-		params.width =  width;
+		params.width = width;
 		relateLayout.setLayoutParams(params);
 	}
 
@@ -146,7 +164,9 @@ public class FirstTabFragment extends BaseFragment implements OnClickListener,
 	}
 
 	/** 创建引导页面 */
-	@TargetApi(Build.VERSION_CODES.JELLY_BEAN) @SuppressLint("NewApi") private void createView() {
+	@TargetApi(Build.VERSION_CODES.JELLY_BEAN)
+	@SuppressLint("NewApi")
+	private void createView() {
 		final int paperSize = 2;
 		views = new ArrayList<View>();
 		dots = new ImageView[paperSize];
@@ -154,12 +174,12 @@ public class FirstTabFragment extends BaseFragment implements OnClickListener,
 				LinearLayout.LayoutParams.WRAP_CONTENT,
 				LinearLayout.LayoutParams.WRAP_CONTENT);
 
-		List<ImageView> imgList=new ArrayList<ImageView>();
-		
-		ImageView img1=new ImageView(mContext);
-		img1.setBackground(getResources().getDrawable(R.drawable.banner_1));
-		ImageView img2=new ImageView(mContext);
-		img2.setBackground(getResources().getDrawable(R.drawable.banner_2));
+		List<ImageView> imgList = new ArrayList<ImageView>();
+
+		ImageView img1 = new ImageView(mContext);
+		img1.setBackground(getResources().getDrawable(R.drawable.banner1));
+		ImageView img2 = new ImageView(mContext);
+		img2.setBackground(getResources().getDrawable(R.drawable.banner2));
 		views.add(img1);
 		views.add(img2);
 
@@ -261,6 +281,35 @@ public class FirstTabFragment extends BaseFragment implements OnClickListener,
 	@Override
 	public void onClick(View v) {
 		// TODO Auto-generated method stub
+		switch (v.getId()) {
+		case R.id.btn_top_right:
+			// 扫描二维码
+			Intent intent = new Intent();
+			intent.setClassName(mContext.getApplicationContext(),
+					"com.shengcai.sweep.SweepActivity");
+			startActivityForResult(intent, 1);
+			break;
 
+		default:
+			break;
+		}
+	}
+	
+	@Override
+	public void onActivityResult(int requestCode, int resultCode, Intent data) {
+		// TODO Auto-generated method stub
+		super.onActivityResult(requestCode, resultCode, data);
+		Log.d(TAG, requestCode+"----"+resultCode+"----");
+		tvTip.setVisibility(View.GONE);
+		lLayout_class.setVisibility(View.VISIBLE);
+		switch (resultCode) {
+		case 1:
+			tvTip.setVisibility(View.GONE);
+			lLayout_class.setVisibility(View.VISIBLE);
+			break;
+
+		default:
+			break;
+		}
 	}
 }

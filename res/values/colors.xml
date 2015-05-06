@@ -75,6 +75,6 @@
 	<!--底部字点击后颜色-->
 	<color name="tv_bottom_click">#fffef076</color>
 	<!-- 整体背景色 -->
-	<color name="backgroud">#ebf6f5</color>
+	<color name="backgroud">#eeeeee</color>
 	
 </resources>
